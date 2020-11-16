@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+	<title>Cadastro Professor</title>
+
+</h:head>
+
+<h:body>
+	<h1>Cadastro Professor</h1>
+	<br />
+
+	<h:form>
+
+
+		<h3>Dados Pessoais</h3>
+		<h:outputLabel value="Nome Completo: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.nome}" />
+		<br />
+		<h:outputLabel value="CPF: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.CPF}" />
+		<br />
+		<h:outputLabel value="Data de Nascimento " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.nascimento}" />
+		<br />
+		<br />
+
+		<h3>Endereço</h3>
+		<h:outputLabel value="Estado: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.estado}" />
+		<br />
+		<h:outputLabel value="Cidade: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.cidade}" />
+		<br />
+		<h:outputLabel value="Bairro: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.bairro}" />
+		<br />
+		<h:outputLabel value="Rua, Av, outros: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.endereco}" />
+		<br />
+		<h:outputLabel value="Numero: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.numero}" />
+		<br />
+		<br />
+
+		<h3>Dados de contato</h3>
+		<h:outputLabel value="Email: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.email}" />
+		<br />
+		<h:outputLabel value="Telefone: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.fone1}" />
+		<br />
+		<h:outputLabel value="Celular: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.fone2}" />
+		<br />
+		<br />
+
+		<h3>Informações de Login</h3>
+		<h:outputLabel value="Usuário: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.usuario}" />
+		<br />
+		<h:outputLabel value="Senha: " />
+		<br />
+		<h:inputText value="#{CadastroTela.professor.senha}" />
+		<br />
+
+
+		<h:commandButton actionListener="#{CadastroTela.salvar}"
+			value="Cadastrar">
+
+			<f:ajax execute="@form" render="@form" />
+
+		</h:commandButton>
+
+	</h:form>
+
+</h:body>
+
+</html>
